@@ -5,6 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -46,9 +48,17 @@ fun showView(){
 @Preview(showBackground = true, widthDp = 750, heightDp = 450)
 @Composable
 fun showView2(){
-    Image(
-        painter = painterResource(id = R.drawable.baseline_castle_24),
-        contentDescription = "callte image",
-        contentScale = ContentScale.Crop,
-    )
+    Button(
+        onClick = { },
+        colors = ButtonDefaults.buttonColors(
+            contentColor = Color.Red,
+            containerColor = Color.Blue
+        )
+        ) {
+        Text(text = "Hello buttom",
+            fontSize = 45.sp)
+        Image(
+            painter = painterResource(id = R.drawable.baseline_castle_24),
+            contentDescription = "cassle image")
+    }
 }
