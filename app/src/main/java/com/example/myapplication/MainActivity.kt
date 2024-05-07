@@ -9,6 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
@@ -16,31 +17,23 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyApplicationTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
         }
     }
 }
 
+@Preview(widthDp = 450, heightDp = 100)
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun showView(){
     Text(
-        text = "Hello $name!",
-        modifier = modifier
+        text = "Hello Sumit kumar sharma",
+        color = Color.Green
     )
 }
 
-@Preview(showBackground = true)
+
+@Preview(widthDp = 450, heightDp = 100)
 @Composable
-fun GreetingPreview() {
-    MyApplicationTheme {
-        Greeting("Android")
-    }
+fun showView2(){
+    Text(text = "Hello Sumit kumar sharma 22",
+        color = Color.Blue)
 }
